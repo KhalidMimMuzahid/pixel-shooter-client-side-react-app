@@ -17,18 +17,34 @@ const Blogs = () => {
             <div className="space-y-4">
               <details className="w-full border rounded-lg">
                 <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400  text-lg font-bold">
-                  what is cors?
+                  What is the Difference between SQL and NoSQL?
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                  Cross-Origin Resource Sharing (CORS) is an HTTP-header based
-                  mechanism that allows a server to indicate any origins
-                  (domain, scheme, or port) other than its own from which a
-                  browser should permit loading resources. CORS also relies on a
-                  mechanism by which browsers make a "preflight" request to the
-                  server hosting the cross-origin resource, in order to check
-                  that the server will permit the actual request. In that
-                  preflight, the browser sends headers that indicate the HTTP
-                  method and headers that will be used in the actual request.{" "}
+                  The five critical differences between SQL vs NoSQL are:
+                  <ul>
+                    <li>
+                      SQL databases are relational, NoSQL databases are
+                      non-relational.
+                    </li>
+                    <li>
+                      SQL databases use structured query language and have a
+                      predefined schema. NoSQL databases have dynamic schemas
+                      for unstructured data.
+                    </li>
+                    <li>
+                      SQL databases are vertically scalable, while NoSQL
+                      databases are horizontally scalable.
+                    </li>
+                    <li>
+                      SQL databases are table-based, while NoSQL databases are
+                      document, key-value, graph, or wide-column stores.
+                    </li>
+                    <li>
+                      SQL databases are better for multi-row transactions, while
+                      NoSQL is better for unstructured data like documents or
+                      JSON.
+                    </li>
+                  </ul>
                 </p>
               </details>
               <details className="w-full border rounded-lg">
