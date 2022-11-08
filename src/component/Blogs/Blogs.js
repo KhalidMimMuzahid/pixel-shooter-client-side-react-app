@@ -61,15 +61,37 @@ const Blogs = () => {
               </details>
               <details className="w-full border rounded-lg">
                 <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400 text-lg font-bold">
-                  How does the private route work?
+                  What is the difference between javascript and NodeJS?
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                  Private Routes vary based on the Apps, For example, Dashboard,
-                  User Profile, App Settings, Home etc. In simple words, These
-                  routes can be accessed only after login. The constraints for
-                  Public and Private routes are that Public routes should not be
-                  accessed after login and Private routes should not be
-                  accessible before login. .
+                  <ol>
+                    <li>
+                      JavaScript is a simple programming language that can be
+                      used with any browser that has the JavaScript Engine
+                      installed. Node.js, on the other hand, is an interpreter
+                      or execution environment for the JavaScript programming
+                      language. It requires libraries that can be conveniently
+                      accessed from JavaScript programming to be more helpful.
+                    </li>
+                    <li>
+                      Any engine may run JavaScript. As a result, writing
+                      JavaScript is incredibly easy, and any working environment
+                      is similar to a complete browser. Node.js, on the other
+                      hand, only enables the V8 engine. Written JavaScript code,
+                      on the other hand, can run in any context, regardless of
+                      whether the V8 engine is supported.
+                    </li>
+                    <li>
+                      A specific non-blocking operation is required to access
+                      any operating system. There are a few essential objects in
+                      JavaScript, but they are entirely OS-specific. Node.js, on
+                      the other hand, can now operate non-blocking software
+                      tasks out of any JavaScript programming. It contains no
+                      OS-specific constants. Node.js establishes a strong
+                      relationship with the system files, allowing companies to
+                      read and write to the hard drive.
+                    </li>
+                  </ol>
                 </p>
               </details>
               <details className="w-full border rounded-lg">
