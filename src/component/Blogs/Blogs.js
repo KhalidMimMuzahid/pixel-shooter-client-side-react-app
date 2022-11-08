@@ -49,26 +49,14 @@ const Blogs = () => {
               </details>
               <details className="w-full border rounded-lg">
                 <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400 text-lg font-bold">
-                  Why are you using firebase? What other options do you have to
-                  implement authentication?
+                  What is JWT, and how does it work?
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                  <span className="font-bold">Firebase: </span>Google Firebase
-                  is an application development platform that allows developers
-                  to create iOS, Android, and Web apps. Here's why you should
-                  use it!Google Firebase offers many features that pitch it as
-                  the go-to backend development tool for web and mobile apps. It
-                  reduces development workload and time. And it's a perfect
-                  prototyping tool. Firebase is simple, lightweight, friendly,
-                  and industrially recognized. <br />
-                  <span className="font-bold">FireBase Alternate:</span>
-                  Considering alternatives to Firebase Realtime Database? See
-                  what Cloud Database Management Systems Firebase Realtime
-                  Database users also considered in their purchasing decision.
-                  When evaluating different solutions, potential buyers compare
-                  competencies in categories such as evaluation and contracting,
-                  integration and deployment, service and support, and specific
-                  product capabilities.
+                  JSON Web Token (JWT) is an open standard (RFC 7519) that
+                  defines a compact and self-contained way for securely
+                  transmitting information between parties as a JSON object.
+                  This information can be verified and trusted because it is
+                  digitally signed.
                 </p>
               </details>
               <details className="w-full border rounded-lg">
