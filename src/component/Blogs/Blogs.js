@@ -96,19 +96,14 @@ const Blogs = () => {
               </details>
               <details className="w-full border rounded-lg">
                 <summary className="px-4 py-6 focus:outline-none focus-visible:ring-violet-400 text-lg font-bold">
-                  What is Node? How does Node work?
+                  How does NodeJS handle multiple requests at the same time?
                 </summary>
                 <p className="px-4 py-6 pt-0 ml-4 -mt-4 dark:text-gray-400">
-                  Node.js is a JavaScript runtime environment that achieves low
-                  latency and high throughput by taking a “non-blocking”
-                  approach to serving requests. In other words, Node.js wastes
-                  no time or resources on waiting for I/O requests to return.
-                  .Node is completely event-driven. Basically the server
-                  consists of one thread processing one event after another. A
-                  new request coming in is one kind of event. The server starts
-                  processing it and when there is a blocking IO operation, it
-                  does not wait until it completes and instead registers a
-                  callback function.
+                  NodeJS receives multiple client requests and places them into
+                  EventQueue. NodeJS is built with the concept of event-driven
+                  architecture. NodeJS has its own EventLoop which is an
+                  infinite loop that receives requests and processes them.
+                  EventLoop is the listener for the EventQueue.
                 </p>
               </details>
             </div>
