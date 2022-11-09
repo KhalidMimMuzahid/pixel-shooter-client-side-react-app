@@ -19,15 +19,19 @@ const UserContext = ({ children }) => {
   const googleProvider = new GoogleAuthProvider();
 
   const signUpWithEmailAndPassword = (email, password) => {
+    setIsLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
   const signInWithEmail = (email, password) => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const signInWithGoogle = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const logOut = () => {
+    setIsLoading(true);
     return signOut(auth);
   };
   const updateUserProfileInfo = (userInfo) => {

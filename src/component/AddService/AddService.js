@@ -1,4 +1,6 @@
+import { info } from "autoprefixer";
 import React, { useContext, useState } from "react";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
 
 const AddService = () => {
@@ -23,7 +25,12 @@ const AddService = () => {
       body: JSON.stringify(serviceInfo),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        if (data.acknowledged) {
+          e.target.reset();
+          toast.success("Service added successfully");
+        }
+      });
   };
   return (
     <section className="p-6 bg-gray-800 text-gray-50  py-8 sm:py-28">
