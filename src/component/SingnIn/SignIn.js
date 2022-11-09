@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
 
 const SignIn = () => {
@@ -17,10 +18,12 @@ const SignIn = () => {
         const user = userCredential.user;
         console.log(user);
         // ...
+        toast.success("signed in Succesfully");
         navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
+        toast.error(errorMessage);
         console.log(errorMessage);
       });
   };

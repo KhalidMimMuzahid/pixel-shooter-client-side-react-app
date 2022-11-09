@@ -19,7 +19,11 @@ const EachService = ({ eachService }) => {
     <div className="mx-auto col-span-12 lg:col-span-6 xl:col-span-4 my-4 w-full max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
       <div className="">
         <a href="#">
-          <img class="p-8 rounded-t-lg" src={thumbnail} alt="product image" />
+          <img
+            class="p-8 rounded-t-lg w-full"
+            src={thumbnail}
+            alt="product image"
+          />
         </a>
         <div class="px-5 pb-5">
           <a href="#">

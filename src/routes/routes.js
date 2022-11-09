@@ -8,6 +8,7 @@ import Services from "../component/Services/Services";
 import SignUp from "../component/SignUp/SignUp";
 import SignIn from "../component/SingnIn/SignIn";
 import Main from "../Layout/Main";
+import PrivetRoutes from "./PrivetRoutes";
 
 export const router = createBrowserRouter([
   {
@@ -44,7 +45,11 @@ export const router = createBrowserRouter([
       {
         path: "/addservice",
         loader: async () => fetch("http://localhost:5000/allservices"),
-        element: <AddService />,
+        element: (
+          <PrivetRoutes>
+            <AddService />
+          </PrivetRoutes>
+        ),
       },
       {
         path: "servicedetails/:id",
