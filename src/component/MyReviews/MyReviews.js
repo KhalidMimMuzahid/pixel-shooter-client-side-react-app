@@ -1,14 +1,25 @@
 import React, { useContext, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/UserContext";
 import MyEachReview from "./MyEachReview";
 
 const MyReviews = () => {
-  const { currentUser } = useContext(AuthContext);
+  const { currentUser, logOut } = useContext(AuthContext);
   const [myReviews, setMyReviews] = useState([]);
+  const navigate = useNavigate;
   useEffect(() => {
-    fetch(`http://localhost:5000/myreviews/${currentUser.uid}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:5000/myreviews/${currentUser.uid}`, {
+      headers: {
+        authorization: `Barerer ${localStorage.getItem("token")}`,
+      },
+    })
+      .then((res) => {
+        // console.log(res);
+        if (res.satus === 401 || res.status === 403) {
+          return logOut();
+        }
+        return res.json();
+      })
       .then((data) => {
         setMyReviews(data);
       });

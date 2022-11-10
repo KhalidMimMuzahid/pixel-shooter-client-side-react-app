@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
 
 const SignUp = () => {
@@ -24,11 +25,29 @@ const SignUp = () => {
         updateUserProfile(userInfo);
         // console.log(userInfo);
         const user = userCredential.user;
+        const currentUser = {
+          userUid: user.uid,
+        };
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            localStorage.setItem("token", data.token);
+          });
         // console.log(user);
         setIsLoading(false);
-
+        toast.success("signed in Succesfully");
         navigate("/");
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
+        // window.location.reload();
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -41,6 +60,22 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        const currentUser = {
+          userUid: user.uid,
+        };
+        fetch("http://localhost:5000/jwt", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(currentUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            localStorage.setItem("token", data.token);
+          });
+
         navigate("/");
       })
       .catch((error) => {
