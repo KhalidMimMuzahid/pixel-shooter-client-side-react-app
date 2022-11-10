@@ -5,7 +5,7 @@ import Reviews from "./Reviews";
 const ServiceDetails = () => {
   const service = useLoaderData();
   const { _id, title, price, thumbnail, rating, description } = service;
-  const [isReviewOpen, setIsReviewOpen] = useState(false);
+  const [isReviewOpen, setIsReviewOpen] = useState(true);
   return (
     <div className="bg-slate-500 py-4">
       <div className="bg-white px-4 py-12 my-10 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
@@ -64,7 +64,12 @@ const ServiceDetails = () => {
                 Close Reviews?
               </button>
             </div>
-            <Reviews></Reviews>
+            <Reviews
+              serviceId={_id}
+              isReviewOpen={isReviewOpen}
+              thumbnail={thumbnail}
+              title={title}
+            ></Reviews>
           </>
         ) : (
           <>

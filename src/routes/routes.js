@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import AddService from "../component/AddService/AddService";
 import Blogs from "../component/Blogs/Blogs";
+import ErrorPage from "../component/ErrorPage/ErrorPage";
 import Home from "../component/Home/Home";
 import MyReviews from "../component/MyReviews/MyReviews";
 import ServiceDetails from "../component/Services/ServiceDetails";
@@ -13,7 +14,7 @@ import PrivetRoutes from "./PrivetRoutes";
 export const router = createBrowserRouter([
   {
     path: "/",
-    errorElement: <h1>this is error page</h1>,
+    errorElement: <ErrorPage />,
     element: <Main />,
     children: [
       {

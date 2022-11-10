@@ -230,18 +230,23 @@ const Header = () => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          strokeWidth="1.5"
+                          stroke-width="1.5"
                           stroke="currentColor"
                           className="w-6 h-6 text-black font-bold text-lg"
                         >
                           <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z"
+                          />
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"
                           />
                         </svg>
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
-                          Be A Coder
+                          PIXEL SHOOTER
                         </span>
                       </a>
                     </div>
@@ -265,7 +270,7 @@ const Header = () => {
                     <ul className="space-y-4">
                       <li>
                         <Link
-                          to="/home"
+                          to="/"
                           aria-label="Home"
                           title="Home"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -275,12 +280,22 @@ const Header = () => {
                       </li>
                       <li>
                         <Link
-                          to="/courses"
+                          to="/services"
                           aria-label="Courses"
                           title="Courses"
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
-                          Courses
+                          Services
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/addservice"
+                          aria-label="Courses"
+                          title="Courses"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          Add Service
                         </Link>
                       </li>
                       <li>
@@ -291,6 +306,16 @@ const Header = () => {
                           className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                           Blogs
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          to="/myreviews"
+                          aria-label="blogs"
+                          title="blogs"
+                          className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        >
+                          My Reviews
                         </Link>
                       </li>
                       {!currentUser ? (
