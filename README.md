@@ -20,4 +20,4 @@
 
 ### deploy project in the firebase project
 
-### Live Site Link: ## https://be-a-coder-8e640.web.app/
+### Live Site Link:
