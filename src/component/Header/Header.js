@@ -59,7 +59,7 @@ const Header = () => {
                 title="home"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Home
+                Home.
               </Link>
             </li>
             <li>
