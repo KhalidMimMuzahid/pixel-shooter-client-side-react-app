@@ -17,9 +17,12 @@ const EachReview = ({ review, reviews, setReviews }) => {
     if (!isAgree) {
       return;
     }
-    fetch(`http://localhost:5000/removereview/${_id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/removereview/${_id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {

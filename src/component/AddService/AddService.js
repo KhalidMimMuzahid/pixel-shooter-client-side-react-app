@@ -17,7 +17,7 @@ const AddService = () => {
   };
   const handleAddService = (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/addservice", {
+    fetch("https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/addservice", {
       method: "POST",
       headers: {
         "content-type": "application/json",

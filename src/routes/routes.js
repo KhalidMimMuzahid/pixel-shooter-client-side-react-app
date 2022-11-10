@@ -19,7 +19,10 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: async () => fetch("http://localhost:5000/services"),
+        loader: async () =>
+          fetch(
+            "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/services"
+          ),
         element: <Home />,
       },
       {
@@ -40,12 +43,18 @@ export const router = createBrowserRouter([
       },
       {
         path: "/services",
-        loader: async () => fetch("http://localhost:5000/allservices"),
+        loader: async () =>
+          fetch(
+            "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/allservices"
+          ),
         element: <Services />,
       },
       {
         path: "/addservice",
-        loader: async () => fetch("http://localhost:5000/allservices"),
+        loader: async () =>
+          fetch(
+            "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/allservices"
+          ),
         element: (
           <PrivetRoutes>
             <AddService />
@@ -55,7 +64,9 @@ export const router = createBrowserRouter([
       {
         path: "servicedetails/:id",
         loader: async ({ params }) =>
-          fetch(`http://localhost:5000/servicedetails/${params.id}`),
+          fetch(
+            `https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/servicedetails/${params.id}`
+          ),
         element: <ServiceDetails />,
       },
     ],

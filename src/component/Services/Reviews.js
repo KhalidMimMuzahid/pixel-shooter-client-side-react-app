@@ -23,13 +23,16 @@ const Reviews = ({ serviceId, isReviewOpen, thumbnail, title }) => {
     newReview.serviceId = serviceId;
     newReview.serviceThumbnail = thumbnail;
     newReview.title = title;
-    fetch("http://localhost:5000/addreview", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(newReview),
-    })
+    fetch(
+      "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/addreview",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newReview),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {
@@ -52,12 +55,15 @@ const Reviews = ({ serviceId, isReviewOpen, thumbnail, title }) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews", {
-      headers: {
-        "content-type": "application/json",
-        serviceId: serviceId,
-      },
-    })
+    fetch(
+      "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/reviews",
+      {
+        headers: {
+          "content-type": "application/json",
+          serviceId: serviceId,
+        },
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);

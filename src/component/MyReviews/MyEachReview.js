@@ -11,9 +11,12 @@ const MyEachReview = ({ myReview, myReviews, setMyReviews }) => {
     if (!isAgree) {
       return;
     }
-    fetch(`http://localhost:5000/removereview/${_id}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/removereview/${_id}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount) {
@@ -44,13 +47,16 @@ const MyEachReview = ({ myReview, myReviews, setMyReviews }) => {
       return alert("rating can't be more than 5");
     }
 
-    fetch("http://localhost:5000/updatereview", {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateReviewInfo),
-    })
+    fetch(
+      "https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/updatereview",
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateReviewInfo),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -8,11 +8,14 @@ const MyReviews = () => {
   const [myReviews, setMyReviews] = useState([]);
   const navigate = useNavigate;
   useEffect(() => {
-    fetch(`http://localhost:5000/myreviews/${currentUser.uid}`, {
-      headers: {
-        authorization: `Barerer ${localStorage.getItem("token")}`,
-      },
-    })
+    fetch(
+      `https://pixel-shooter-server-side-khalidmimmuzahid.vercel.app/myreviews/${currentUser.uid}`,
+      {
+        headers: {
+          authorization: `Barerer ${localStorage.getItem("token")}`,
+        },
+      }
+    )
       .then((res) => {
         // console.log(res);
         if (res.satus === 401 || res.status === 403) {
