@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const EachService = ({ eachService }) => {
   const { title, thumbnail, rating, price, description, _id } = eachService;
   const [newDescription, setNewDescription] = useState("loading ...");
-  const descriptionLength = description.length;
+  console.log("length error", description);
+  const descriptionLength = description?.length;
+  console.log("descriptionLength", descriptionLength);
   useEffect(() => {
     if (descriptionLength > 100) {
       const sliceDescription = description.slice(0, 100);
