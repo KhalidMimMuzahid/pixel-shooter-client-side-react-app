@@ -61,7 +61,7 @@ const EachReview = ({ review, reviews, setReviews }) => {
           </svg>
           <span className="text-xl font-bold">{rating}</span>
         </div>
-        {reviewerEmail === currentUser.email && _id && (
+        {reviewerEmail === currentUser?.email && _id && (
           <div>
             <svg
               onClick={deletReview}
