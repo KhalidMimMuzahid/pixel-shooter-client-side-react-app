@@ -30,4 +30,4 @@
 ### =>Can update and delete reviews
 
 ## GitHub Server: https://github.com/KhalidMimMuzahid/-pixel-shooter-server-side
-### Live Site Link: ## https://pixel-shooter-3d676.web.app/services
+## Live Site Link:  https://pixel-shooter-3d676.web.app/services
