@@ -18,8 +18,8 @@ const Header = () => {
       });
   };
   return (
-    <div className="bg-gray-900 fixed top-0 right-0 left-0 z-50">
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full md:max-w-screen-xl md:px-24 md:px-8">
+    <div className=" fixed top-0 right-0 left-0 z-50">
+      <div className="bg-gray-900 px-4 py-5 mx-auto  max-w-[1440px] lg:px-16 md:px-2">
         <div className="relative flex items-center justify-between">
           <Link
             to="/"
@@ -59,7 +59,7 @@ const Header = () => {
                 title="home"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Home.
+                Home
               </Link>
             </li>
             <li>

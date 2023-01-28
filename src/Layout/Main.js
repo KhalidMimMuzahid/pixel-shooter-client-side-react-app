@@ -5,7 +5,7 @@ import Header from "../component/Header/Header";
 
 const Main = () => {
   return (
-    <div>
+    <div className="max-w-[1440px] mx-auto ">
       <Header />
       <div className="mt-20">
         <Outlet />

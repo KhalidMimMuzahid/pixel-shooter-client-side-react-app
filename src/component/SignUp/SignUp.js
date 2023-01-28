@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../context/UserContext";
@@ -10,6 +10,7 @@ const SignUp = () => {
     updateUserProfileInfo,
     setIsLoading,
   } = useContext(AuthContext);
+
   const navigate = useNavigate();
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -47,9 +48,9 @@ const SignUp = () => {
         setIsLoading(false);
         toast.success("signed in Succesfully");
         navigate("/");
-        setTimeout(() => {
-          window.location.reload();
-        }, 100);
+        // setTimeout(() => {
+        //   window.location.reload();
+        // }, 300);
         // window.location.reload();
       })
       .catch((error) => {
@@ -102,9 +103,10 @@ const SignUp = () => {
         // ...
       });
   };
+
   return (
-    <div className="h-full pt-24 border border-slate-900 border-4 flex justify-center border border-black border-4">
-      <div className="h-full w-full max-w-md px-8 py-2 space-y-0 rounded-xl my-4 bg-gray-900 text-gray-100 border border-4 border border-red-900 border-4">
+    <div className="h-full pt-24 flex justify-center ">
+      <div className="h-full w-full max-w-md px-8 py-2 space-y-0 rounded-xl my-4 bg-gray-900 text-gray-100 ">
         <h1 className="text-2xl font-bold text-center">Sign Up</h1>
         <form
           onSubmit={handleFormSubmit}
