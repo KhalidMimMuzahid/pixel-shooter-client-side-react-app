@@ -20,4 +20,14 @@
 
 ### deploy project in the firebase project
 
-### Live Site Link: ## https://pixel-shooter-3d676.web.app/services
+
+
+
+## Technologies: React JS, Node JS, Express JS, Tailwind, Firebase, Mongo DB, JWT, vercel.
+## Overview 
+### =>Implemented password validation, privet routes, for the security reason I used JWT technology
+### =>Can add services and any user can give reviews
+### =>Can update and delete reviews
+
+## GitHub Server: https://github.com/KhalidMimMuzahid/-pixel-shooter-server-side
+## Live Site Link:  https://pixel-shooter-3d676.web.app/services
